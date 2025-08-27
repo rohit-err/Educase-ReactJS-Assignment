@@ -1,0 +1,23 @@
+# Node.js dependencies (both backend and frontend)
+**/node_modules/
+
+# Environment variables
+**/.env
+
+# Build output (e.g., Vite or other bundlers)
+**/dist/
+
+# Log files
+*.log
+logs/
+npm-debug.log*
+
+# OS/system files
+.DS_Store
+Thumbs.db
+
+# Editor settings (optional)
+.vscode/
+
+# Ignore yarn files since you're using npm
+yarn.lock
