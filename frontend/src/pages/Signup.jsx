@@ -55,18 +55,18 @@ const Signup = () => {
   return (
     <form
       onSubmit={handleSubmit}
-      className="bg-white rounded-lg shadow-sm w-full max-w-xs p-4"
+      className="bg-white rounded-lg shadow-sm w-full max-w-sm sm:max-w-md lg:max-w-lg p-4 sm:p-6 lg:p-8 mx-auto"
     >
-      <div className="space-y-6">
+      <div className="space-y-4 sm:space-y-6">
         <div>
-          <h1 className="text-lg font-bold text-gray-900 mb-6">
+          <h1 className="text-lg sm:text-xl lg:text-2xl font-bold text-gray-900 mb-4 sm:mb-6">
             Create your PopX account
           </h1>
         </div>
 
-        <div className="space-y-4">
+        <div className="space-y-3 sm:space-y-4">
           <div>
-            <label className="block text-sm font-medium text-purple-600 mb-2">
+            <label className="block text-sm sm:text-base font-medium text-purple-600 mb-2">
               Full Name *
             </label>
             <input
@@ -76,12 +76,12 @@ const Signup = () => {
               onChange={handleChange}
               placeholder="Marry Doe"
               disabled={isLoading}
-              className="w-full p-3 border border-gray-200 rounded-lg text-sm bg-gray-50 focus:outline-none focus:ring-2 focus:ring-purple-500 disabled:opacity-50 disabled:cursor-not-allowed"
+              className="w-full p-3 sm:p-4 border border-gray-200 rounded-lg text-sm sm:text-base bg-gray-50 focus:outline-none focus:ring-2 focus:ring-purple-500 disabled:opacity-50 disabled:cursor-not-allowed"
             />
           </div>
 
           <div>
-            <label className="block text-sm font-medium text-purple-600 mb-2">
+            <label className="block text-sm sm:text-base font-medium text-purple-600 mb-2">
               Phone number *
             </label>
             <input
@@ -91,12 +91,12 @@ const Signup = () => {
               onChange={handleChange}
               placeholder="Enter phone number"
               disabled={isLoading}
-              className="w-full p-3 border border-gray-200 rounded-lg text-sm bg-gray-50 focus:outline-none focus:ring-2 focus:ring-purple-500 disabled:opacity-50 disabled:cursor-not-allowed"
+              className="w-full p-3 sm:p-4 border border-gray-200 rounded-lg text-sm sm:text-base bg-gray-50 focus:outline-none focus:ring-2 focus:ring-purple-500 disabled:opacity-50 disabled:cursor-not-allowed"
             />
           </div>
 
           <div>
-            <label className="block text-sm font-medium text-purple-600 mb-2">
+            <label className="block text-sm sm:text-base font-medium text-purple-600 mb-2">
               Email address *
             </label>
             <input
@@ -106,12 +106,12 @@ const Signup = () => {
               onChange={handleChange}
               placeholder="Enter email address"
               disabled={isLoading}
-              className="w-full p-3 border border-gray-200 rounded-lg text-sm bg-gray-50 focus:outline-none focus:ring-2 focus:ring-purple-500 disabled:opacity-50 disabled:cursor-not-allowed"
+              className="w-full p-3 sm:p-4 border border-gray-200 rounded-lg text-sm sm:text-base bg-gray-50 focus:outline-none focus:ring-2 focus:ring-purple-500 disabled:opacity-50 disabled:cursor-not-allowed"
             />
           </div>
 
           <div>
-            <label className="block text-sm font-medium text-purple-600 mb-2">
+            <label className="block text-sm sm:text-base font-medium text-purple-600 mb-2">
               Password *
             </label>
             <input
@@ -121,12 +121,12 @@ const Signup = () => {
               onChange={handleChange}
               placeholder="Enter password"
               disabled={isLoading}
-              className="w-full p-3 border border-gray-200 rounded-lg text-sm bg-gray-50 focus:outline-none focus:ring-2 focus:ring-purple-500 disabled:opacity-50 disabled:cursor-not-allowed"
+              className="w-full p-3 sm:p-4 border border-gray-200 rounded-lg text-sm sm:text-base bg-gray-50 focus:outline-none focus:ring-2 focus:ring-purple-500 disabled:opacity-50 disabled:cursor-not-allowed"
             />
           </div>
 
           <div>
-            <label className="block text-sm font-medium text-purple-600 mb-2">
+            <label className="block text-sm sm:text-base font-medium text-purple-600 mb-2">
               Company name
             </label>
             <input
@@ -136,15 +136,15 @@ const Signup = () => {
               onChange={handleChange}
               placeholder="Enter company name"
               disabled={isLoading}
-              className="w-full p-3 border border-gray-200 rounded-lg text-sm bg-gray-50 focus:outline-none focus:ring-2 focus:ring-purple-500 disabled:opacity-50 disabled:cursor-not-allowed"
+              className="w-full p-3 sm:p-4 border border-gray-200 rounded-lg text-sm sm:text-base bg-gray-50 focus:outline-none focus:ring-2 focus:ring-purple-500 disabled:opacity-50 disabled:cursor-not-allowed"
             />
           </div>
 
-          <div className="flex items-center gap-2 pt-2">
-            <span className="text-sm font-medium text-purple-600">
+          <div className="flex flex-col sm:flex-row sm:items-center gap-2 pt-2">
+            <span className="text-sm sm:text-base font-medium text-purple-600">
               Are you an Agency? *
             </span>
-            <div className="flex gap-4 ml-2">
+            <div className="flex gap-4 sm:ml-2">
               <label className="flex items-center cursor-pointer">
                 <input
                   type="radio"
@@ -155,12 +155,12 @@ const Signup = () => {
                   disabled={isLoading}
                   className="hidden"
                 />
-                <div className={`w-5 h-5 border-2 border-purple-600 rounded-full flex items-center justify-center ${isLoading ? 'opacity-50' : ''}`}>
+                <div className={`w-4 h-4 sm:w-5 sm:h-5 border-2 border-purple-600 rounded-full flex items-center justify-center ${isLoading ? 'opacity-50' : ''}`}>
                   {formData.isAgency === "yes" && (
-                    <div className="w-3 h-3 bg-purple-600 rounded-full"></div>
+                    <div className="w-2 h-2 sm:w-3 sm:h-3 bg-purple-600 rounded-full"></div>
                   )}
                 </div>
-                <span className="text-sm text-purple-600 ml-1">Yes</span>
+                <span className="text-sm sm:text-base text-purple-600 ml-1">Yes</span>
               </label>
 
               <label className="flex items-center cursor-pointer">
@@ -173,12 +173,12 @@ const Signup = () => {
                   disabled={isLoading}
                   className="hidden"
                 />
-                <div className={`w-5 h-5 border-2 border-purple-600 rounded-full flex items-center justify-center ${isLoading ? 'opacity-50' : ''}`}>
+                <div className={`w-4 h-4 sm:w-5 sm:h-5 border-2 border-purple-600 rounded-full flex items-center justify-center ${isLoading ? 'opacity-50' : ''}`}>
                   {formData.isAgency === "no" && (
-                    <div className="w-3 h-3 bg-purple-600 rounded-full"></div>
+                    <div className="w-2 h-2 sm:w-3 sm:h-3 bg-purple-600 rounded-full"></div>
                   )}
                 </div>
-                <span className="text-sm text-purple-600 ml-1">No</span>
+                <span className="text-sm sm:text-base text-purple-600 ml-1">No</span>
               </label>
             </div>
           </div>
@@ -188,7 +188,7 @@ const Signup = () => {
       <button
         disabled={isLoading}
         type="submit"
-        className="w-full bg-purple-600 hover:bg-purple-700 disabled:bg-purple-400 disabled:cursor-not-allowed text-white py-3 rounded-lg font-medium text-sm mt-6 flex items-center justify-center transition-colors duration-200"
+        className="w-full bg-purple-600 hover:bg-purple-700 disabled:bg-purple-400 disabled:cursor-not-allowed text-white py-3 sm:py-4 rounded-lg font-medium text-sm sm:text-base mt-4 sm:mt-6 flex items-center justify-center transition-colors duration-200"
       >
         {isLoading ? (
           <Loader className="animate-spin" size={16} />
@@ -197,10 +197,10 @@ const Signup = () => {
         )}
       </button>
 
-      <div className="mt-3">
+      <div className="mt-3 sm:mt-4">
         <button
           type="button"
-          className="text-purple-600 text-sm underline hover:text-purple-700 transition-colors duration-200"
+          className="text-purple-600 text-sm sm:text-base underline hover:text-purple-700 transition-colors duration-200"
           onClick={() => navigate("/")}
           disabled={isLoading}
         >

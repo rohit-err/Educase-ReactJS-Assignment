@@ -21,3 +21,5 @@ Thumbs.db
 
 # Ignore yarn files since you're using npm
 yarn.lock
+
+app.txt
