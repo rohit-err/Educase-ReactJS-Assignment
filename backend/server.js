@@ -9,7 +9,7 @@ require("dotenv").config()
 const port = process.env.PORT
 
 app.use(cors({
-    origin: "https://educase-reactjs-assignment-frontend.onrender.com",
+    origin: "https://educase-react-js-assignment-fronten.vercel.app",
     credentials: true,
 }));
 
